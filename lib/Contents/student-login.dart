@@ -114,11 +114,11 @@ class _studloginState extends State<studlogin> {
                               borderRadius: BorderRadius.circular(15)),
 
                           textStyle: const TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w800)),
+                              fontSize: 19, fontWeight: FontWeight.w800)),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 15, right: 10),
+                    padding: const EdgeInsets.only(bottom: 15, right: 15),
                     child: TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/parlogin');

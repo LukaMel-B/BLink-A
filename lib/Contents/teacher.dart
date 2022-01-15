@@ -92,12 +92,12 @@ class _teacher1State extends State<teacher1> {
                     padding: const EdgeInsets.only(bottom: 15),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/stud-login');
+                        Navigator.pushNamed(context, '/teach-login');
                       },
                       child: const Padding(
                         padding: EdgeInsets.only(
                             left: 7, right: 7, bottom: 6, top: 6),
-                        child:  Icon(Icons.arrow_forward_rounded,
+                        child:  Icon(Icons.arrow_forward_ios_rounded,
                             size: 30,
                             color: Colors.white
                         ),

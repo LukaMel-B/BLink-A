@@ -97,7 +97,7 @@ class _student1State extends State<student1> {
                       child: const Padding(
                         padding: EdgeInsets.only(
                             left: 7, right: 7, bottom: 6, top: 6),
-                        child:  Icon(Icons.arrow_forward_rounded,
+                        child:  Icon(Icons.arrow_forward_ios_rounded,
                         size: 30,
                             color: Colors.white
                         ),

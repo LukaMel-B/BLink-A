@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
-class student1 extends StatefulWidget {
-  const student1({Key? key}) : super(key: key);
+class teacher1 extends StatefulWidget {
+  const teacher1({Key? key}) : super(key: key);
 
   @override
-  _student1State createState() => _student1State();
+  _teacher1State createState() => _teacher1State();
 }
 
-class _student1State extends State<student1> {
+class _teacher1State extends State<teacher1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class _student1State extends State<student1> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: const [
                 Text(
-                  'Student',
+                  'Teacher',
                   style: TextStyle(
                       color: Color(0xffABAAAA),
                       // color: Color(0xff388A75),
@@ -47,39 +47,39 @@ class _student1State extends State<student1> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Learning',
+                  'We broad',
                   style: TextStyle(
-                      // color: Colors.black87,
+                    // color: Colors.black87,
                       color: Color(0xff282828),
                       fontFamily: 'Roboto',
                       fontSize: 45,
                       fontWeight: FontWeight.w600),
                 ),
                 const Text(
-                  'Makes me',
+                  'little minds,',
                   style: TextStyle(
-                      // color: Colors.black87,
+                    // color: Colors.black87,
                       color: Color(0xff282828),
                       fontFamily: 'Roboto',
                       fontSize: 45,
                       fontWeight: FontWeight.w600),
                 ),
                 const Text(
-                  'Happy',
+                  'genius',
                   style: TextStyle(
-                      // color: Colors.black87,
+                    // color: Colors.black87,
                       color: Color(0xff282828),
                       fontFamily: 'Roboto',
                       fontSize: 45,
                       fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 28,
                 ),
                 Image.asset(
-                  'images/student1-page.png',
-                  height: 290,
-                  width: 310,
+                  'images/teaching1-page.png',
+                  height: 280,
+                  width: 280,
                   fit: BoxFit.fill,
                 ),
               ],
@@ -98,7 +98,7 @@ class _student1State extends State<student1> {
                         padding: EdgeInsets.only(
                             left: 7, right: 7, bottom: 6, top: 6),
                         child:  Icon(Icons.arrow_forward_rounded,
-                        size: 30,
+                            size: 30,
                             color: Colors.white
                         ),
                       ),
@@ -122,3 +122,4 @@ class _student1State extends State<student1> {
     );
   }
 }
+

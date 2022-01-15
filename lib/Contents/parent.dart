@@ -1,14 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class student1 extends StatefulWidget {
-  const student1({Key? key}) : super(key: key);
+class parent1 extends StatefulWidget {
+  const parent1({Key? key}) : super(key: key);
 
   @override
-  _student1State createState() => _student1State();
+  _parent1State createState() => _parent1State();
 }
 
-class _student1State extends State<student1> {
+class _parent1State extends State<parent1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +27,7 @@ class _student1State extends State<student1> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: const [
                 Text(
-                  'Student',
+                  'Parent',
                   style: TextStyle(
                       color: Color(0xffABAAAA),
                       // color: Color(0xff388A75),
@@ -47,27 +46,27 @@ class _student1State extends State<student1> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Learning',
+                  'Kids matter,',
                   style: TextStyle(
-                      // color: Colors.black87,
+                    // color: Colors.black87,
                       color: Color(0xff282828),
                       fontFamily: 'Roboto',
                       fontSize: 45,
                       fontWeight: FontWeight.w600),
                 ),
                 const Text(
-                  'Makes me',
+                  'no matter',
                   style: TextStyle(
-                      // color: Colors.black87,
+                    // color: Colors.black87,
                       color: Color(0xff282828),
                       fontFamily: 'Roboto',
                       fontSize: 45,
                       fontWeight: FontWeight.w600),
                 ),
                 const Text(
-                  'Happy',
+                  'what!',
                   style: TextStyle(
-                      // color: Colors.black87,
+                    // color: Colors.black87,
                       color: Color(0xff282828),
                       fontFamily: 'Roboto',
                       fontSize: 45,
@@ -77,8 +76,8 @@ class _student1State extends State<student1> {
                   height: 30,
                 ),
                 Image.asset(
-                  'images/student1-page.png',
-                  height: 290,
+                  'images/parent1-page.png',
+                  height: 310,
                   width: 310,
                   fit: BoxFit.fill,
                 ),
@@ -98,7 +97,7 @@ class _student1State extends State<student1> {
                         padding: EdgeInsets.only(
                             left: 7, right: 7, bottom: 6, top: 6),
                         child:  Icon(Icons.arrow_forward_rounded,
-                        size: 30,
+                            size: 30,
                             color: Colors.white
                         ),
                       ),
@@ -122,3 +121,4 @@ class _student1State extends State<student1> {
     );
   }
 }
+

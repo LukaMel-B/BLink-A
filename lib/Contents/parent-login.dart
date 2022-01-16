@@ -60,11 +60,13 @@ class _parloginState extends State<parlogin> {
                           fit: BoxFit.fill,
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 38,bottom: 5,left: 50,right: 50),
+                          padding: const EdgeInsets.only(
+                              top: 38, bottom: 5, left: 50, right: 50),
                           child: TextField(
                             cursorColor: const Color(0xff46665E),
                             decoration: InputDecoration(
-                              contentPadding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+                              contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 30, vertical: 20),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30.0),
                                 borderSide: const BorderSide(
@@ -73,19 +75,23 @@ class _parloginState extends State<parlogin> {
                                 ),
                               ),
                               filled: true,
-                              hintStyle: const TextStyle(color: Color(0xffABAAAA)),
+                              hintStyle:
+                                  const TextStyle(color: Color(0xffABAAAA)),
                               hintText: "Username",
-                              fillColor: const Color(0xffFDF9F9).withOpacity(0.35),
+                              fillColor:
+                                  const Color(0xffFDF9F9).withOpacity(0.35),
                             ),
                             keyboardType: TextInputType.name,
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 10,bottom: 30,left: 50,right: 50),
+                          padding: const EdgeInsets.only(
+                              top: 10, bottom: 30, left: 50, right: 50),
                           child: TextField(
                             cursorColor: const Color(0xff46665E),
                             decoration: InputDecoration(
-                              contentPadding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+                              contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 30, vertical: 20),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30.0),
                                 borderSide: const BorderSide(
@@ -94,25 +100,27 @@ class _parloginState extends State<parlogin> {
                                 ),
                               ),
                               filled: true,
-                              hintStyle: const TextStyle(color: Color(0xffABAAAA)),
+                              hintStyle:
+                                  const TextStyle(color: Color(0xffABAAAA)),
                               hintText: "Password",
-                              fillColor: const Color(0xffFDF9F9).withOpacity(0.35),
+                              fillColor:
+                                  const Color(0xffFDF9F9).withOpacity(0.35),
                             ),
                             keyboardType: TextInputType.visiblePassword,
                             obscureText: true,
                           ),
                         ),
                         SizedBox(
-                          height: MediaQuery.of(context).size.height*.01,
+                          height: MediaQuery.of(context).size.height * .01,
                         ),
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      mainAxisSize: MainAxisSize.max ,
+                      mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 13,left: 25),
+                          padding: const EdgeInsets.only(bottom: 13, left: 25),
                           child: TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/signup');
@@ -127,7 +135,6 @@ class _parloginState extends State<parlogin> {
                             style: TextButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15)),
-
                                 textStyle: const TextStyle(
                                     fontSize: 19, fontWeight: FontWeight.w800)),
                           ),
@@ -139,9 +146,7 @@ class _parloginState extends State<parlogin> {
                               Navigator.pushNamed(context, '/student-profile');
                             },
                             child: const Icon(Icons.arrow_forward_rounded,
-                                size: 30,
-                                color: Colors.white
-                            ),
+                                size: 30, color: Colors.white),
                             style: TextButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)),
@@ -160,4 +165,3 @@ class _parloginState extends State<parlogin> {
     );
   }
 }
-

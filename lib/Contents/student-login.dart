@@ -11,133 +11,151 @@ class _studloginState extends State<studlogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [Color(0xffF9FFED), Color(0xffA4DADA)]),
-        ),
-        child: Column(
-          children: <Widget>[
-            const SizedBox(
-              height: 50,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
-                Text(
-                  'Login',
-                  style: TextStyle(
-                      color: Color(0xffABAAAA),
-                      // color: Color(0xff388A75),
-                      fontFamily: 'Roboto',
-                      fontSize: 20),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Flexible(
+            fit: FlexFit.loose,
+            child: SingleChildScrollView(
+              child: Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Color(0xffF9FFED), Color(0xffA4DADA)]),
                 ),
-                SizedBox(
-                  width: 40,
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 50,
-                ),
-                Image.asset(
-                  'images/student-login.png',
-                  height: 250,
-                  width: 250,
-                  fit: BoxFit.fill,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 55,bottom: 5,left: 50,right: 50),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                          borderSide: const BorderSide(
-                            width: 0,
-                            style: BorderStyle.none,
+                child: Column(
+                  children: <Widget>[
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: const [
+                        Text(
+                          'Login',
+                          style: TextStyle(
+                              color: Color(0xffABAAAA),
+                              // color: Color(0xff388A75),
+                              fontFamily: 'Roboto',
+                              fontSize: 20),
+                        ),
+                        SizedBox(
+                          width: 40,
+                        )
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const SizedBox(
+                          height: 50,
+                        ),
+                        Image.asset(
+                          'images/student-login.png',
+                          // height: MediaQuery.of(context).size.height*.43,
+                          // width: MediaQuery.of(context).size.width*.72,
+                          height: 280,
+                          width: 280,
+                          fit: BoxFit.fill,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 38,bottom: 5,left: 50,right: 50),
+                          child: TextField(
+                            cursorColor: const Color(0xff46665E),
+                            decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                  borderSide: const BorderSide(
+                                    width: 0,
+                                    style: BorderStyle.none,
+                                  ),
+                                ),
+                                filled: true,
+                                hintStyle: const TextStyle(color: Color(0xffABAAAA)),
+                                hintText: "Username",
+                                fillColor: const Color(0xffFDF9F9).withOpacity(0.35),
+                            ),
+                            keyboardType: TextInputType.emailAddress,
                           ),
                         ),
-                        filled: true,
-                        hintStyle: const TextStyle(color: Color(0xffABAAAA)),
-                        hintText: "     Username",
-                        fillColor: const Color(0xffFDF9F9).withOpacity(0.3),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10,bottom: 20,left: 50,right: 50),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                        borderSide: const BorderSide(
-                          width: 0,
-                          style: BorderStyle.none,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10,bottom: 30,left: 50,right: 50),
+                          child: TextField(
+                            cursorColor: const Color(0xff46665E),
+                            decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30.0),
+                                borderSide: const BorderSide(
+                                  width: 0,
+                                  style: BorderStyle.none,
+                                ),
+                              ),
+                              filled: true,
+                              hintStyle: const TextStyle(color: Color(0xffABAAAA)),
+                              hintText: "Password",
+                              fillColor: const Color(0xffFDF9F9).withOpacity(0.35),
+                            ),
+                            keyboardType: TextInputType.visiblePassword,
+                            obscureText: true,
+                          ),
                         ),
-                      ),
-                      filled: true,
-                      hintStyle: const TextStyle(color: Color(0xffABAAAA)),
-                      hintText: "     Username",
-                      fillColor: const Color(0xffFDF9F9).withOpacity(0.3),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 15,left: 25),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/parlogin');
-                      },
-                      child: const Text(
-                        ' Sign Up',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Roboto',
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height*.01,
                         ),
-                      ),
-                      style: TextButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15)),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisSize: MainAxisSize.max ,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 25,left: 25),
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/signup');
+                            },
+                            child: const Text(
+                              ' Sign Up',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Roboto',
+                              ),
+                            ),
+                            style: TextButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15)),
 
-                          textStyle: const TextStyle(
-                              fontSize: 19, fontWeight: FontWeight.w800)),
+                                textStyle: const TextStyle(
+                                    fontSize: 19, fontWeight: FontWeight.w800)),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 25, right: 15),
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/student-profile');
+                            },
+                            child: const Icon(Icons.arrow_forward_rounded,
+                                size: 30,
+                                color: Colors.white
+                            ),
+                            style: TextButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15)),
+                          ),
+                        ),
+                        ),
+                      ],
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 15, right: 15),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/parlogin');
-                      },
-                      child: const Icon(Icons.arrow_forward_rounded,
-                          size: 30,
-                          color: Colors.white
-                      ),
-                      style: TextButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15)),
-                    ),
-                  ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

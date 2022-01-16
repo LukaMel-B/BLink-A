@@ -46,7 +46,7 @@ class _teachloginState extends State<teachlogin> {
                       ],
                     ),
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                     mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         const SizedBox(
                           height: 50,
@@ -77,7 +77,7 @@ class _teachloginState extends State<teachlogin> {
                               hintText: "Username",
                               fillColor: const Color(0xffFDF9F9).withOpacity(0.35),
                             ),
-                            keyboardType: TextInputType.emailAddress,
+                            keyboardType: TextInputType.name,
                           ),
                         ),
                         Padding(
@@ -112,7 +112,7 @@ class _teachloginState extends State<teachlogin> {
                       mainAxisSize: MainAxisSize.max ,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 25,left: 25),
+                          padding: const EdgeInsets.only(bottom: 14,left: 25),
                           child: TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/signup');
@@ -133,7 +133,7 @@ class _teachloginState extends State<teachlogin> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 25, right: 15),
+                          padding: const EdgeInsets.only(bottom: 14, right: 15),
                           child: TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/teacher-profile');

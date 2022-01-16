@@ -77,7 +77,7 @@ class _parloginState extends State<parlogin> {
                               hintText: "Username",
                               fillColor: const Color(0xffFDF9F9).withOpacity(0.35),
                             ),
-                            keyboardType: TextInputType.emailAddress,
+                            keyboardType: TextInputType.name,
                           ),
                         ),
                         Padding(
@@ -112,7 +112,7 @@ class _parloginState extends State<parlogin> {
                       mainAxisSize: MainAxisSize.max ,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 25,left: 25),
+                          padding: const EdgeInsets.only(bottom: 13,left: 25),
                           child: TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/signup');
@@ -133,7 +133,7 @@ class _parloginState extends State<parlogin> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 25, right: 15),
+                          padding: const EdgeInsets.only(bottom: 13, right: 15),
                           child: TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/student-profile');

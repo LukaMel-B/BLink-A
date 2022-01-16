@@ -77,7 +77,7 @@ class _studloginState extends State<studlogin> {
                                 hintText: "Username",
                                 fillColor: const Color(0xffFDF9F9).withOpacity(0.35),
                             ),
-                            keyboardType: TextInputType.emailAddress,
+                            keyboardType: TextInputType.name,
                           ),
                         ),
                         Padding(

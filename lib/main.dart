@@ -7,6 +7,7 @@ import 'Contents//parent.dart';
 import 'Contents//teacher-login.dart';
 import 'Contents//parent-login.dart';
 import 'Contents//SignUp.dart';
+import 'Contents//student-profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
           '/teach-login': (context) => const teachlogin(),
           '/par-login': (context) => const parlogin(),
           '/signup': (context) => const SignUp(),
+          '/StudentProfile': (context) => const StudentProfile(),
         });
   }
 }

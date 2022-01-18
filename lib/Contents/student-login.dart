@@ -143,7 +143,7 @@ class _studloginState extends State<studlogin> {
                           padding: const EdgeInsets.only(bottom: 25, right: 15),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/student-profile');
+                              Navigator.pushNamed(context, '/StudentProfile');
                             },
                             child: const Icon(Icons.arrow_forward_rounded,
                                 size: 30, color: Colors.white),

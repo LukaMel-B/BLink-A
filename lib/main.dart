@@ -7,7 +7,7 @@ import 'Contents//parent.dart';
 import 'Contents//teacher-login.dart';
 import 'Contents//parent-login.dart';
 import 'Contents//SignUp.dart';
-import 'Contents//student-profile.dart';
+import 'Contents//student-profile-edit.dart';
 import 'Contents//Setting.dart';
 
 void main() {

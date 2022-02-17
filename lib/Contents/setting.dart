@@ -82,7 +82,7 @@ class _SettingsState extends State<Settings> {
                           ),
                         ),
                         const SizedBox(
-                          height: 18,
+                          height: 25,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -123,7 +123,7 @@ class _SettingsState extends State<Settings> {
                           ],
                         ),
                         const SizedBox(
-                          height: 40,
+                          height: 45 ,
                         ),
                         const Padding(
                           padding: EdgeInsets.only(left: 65),
@@ -138,64 +138,31 @@ class _SettingsState extends State<Settings> {
                           ),
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 25,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const SizedBox(
-                              width: 0,
-                            ),
-                            const Icon(Icons.privacy_tip_rounded,
-                                size: 30, color: Colors.white),
-                            const Text(
-                              'Privacy                ',
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  // color: Color(0xff388A75),
-                                  fontFamily: 'Rockwell',
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.normal),
-                            ),
-                            const SizedBox(
-
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                Navigator.pushNamed(
-                                    context, '/student-profile');
-                              },
-                              child: const Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 30,
-                                  color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const SizedBox(
-                              width: 0,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  top: 18, bottom: 25, right: 15),
-                              child: Icon(Icons.power_settings_new_rounded,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 1, bottom: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const SizedBox(
+                                width: 0,
+                              ),
+                              const Icon(Icons.privacy_tip_rounded,
                                   size: 30, color: Colors.white),
-                            ),
-                            const Text(
-                              'Logout                 ',
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  // color: Color(0xff388A75),
-                                  fontFamily: 'Rockwell',
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.normal),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: TextButton(
+                              const Text(
+                                'Privacy      ',
+                                style: TextStyle(
+                                    color: Colors.black87,
+                                    // color: Color(0xff388A75),
+                                    fontFamily: 'Rockwell',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                              const SizedBox(
+                                width: 25,
+                              ),
+                              TextButton(
                                 onPressed: () {
                                   Navigator.pushNamed(
                                       context, '/student-profile');
@@ -205,33 +172,32 @@ class _SettingsState extends State<Settings> {
                                     size: 30,
                                     color: Colors.white),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const SizedBox(
-                              width: 0,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  top: 18, bottom: 25, right: 15),
-                              child: Icon(Icons.lock_open_rounded,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 1, bottom: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const SizedBox(
+                                width: 0,
+                              ),
+                              const Icon(Icons.power_settings_new_rounded,
                                   size: 30, color: Colors.white),
-                            ),
-                            const Text(
-                              'Forgot Password',
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  // color: Color(0xff388A75),
-                                  fontFamily: 'Rockwell',
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.normal),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: TextButton(
+                              const Text(
+                                'Logout       ',
+                                style: TextStyle(
+                                    color: Colors.black87,
+                                    // color: Color(0xff388A75),
+                                    fontFamily: 'Rockwell',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                              const SizedBox(
+                                width: 25,
+                              ),
+                              TextButton(
                                 onPressed: () {
                                   Navigator.pushNamed(
                                       context, '/student-profile');
@@ -241,33 +207,29 @@ class _SettingsState extends State<Settings> {
                                     size: 30,
                                     color: Colors.white),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const SizedBox(
-                              width: 0,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  top: 18, bottom: 25, right: 15),
-                              child: Icon(Icons.report_gmailerrorred_rounded,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 1, bottom: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const SizedBox(
+                                width: 0,
+                              ),
+                              const Icon(Icons.lock_open_rounded,
                                   size: 30, color: Colors.white),
-                            ),
-                            const Text(
-                              'About Us              ',
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  // color: Color(0xff388A75),
-                                  fontFamily: 'Rockwell',
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.normal),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: TextButton(
+                              const Text(
+                                'Forgot Password   ',
+                                style: TextStyle(
+                                    color: Colors.black87,
+                                    // color: Color(0xff388A75),
+                                    fontFamily: 'Rockwell',
+                                    fontSize: 17.5,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                              TextButton(
                                 onPressed: () {
                                   Navigator.pushNamed(
                                       context, '/student-profile');
@@ -277,8 +239,40 @@ class _SettingsState extends State<Settings> {
                                     size: 30,
                                     color: Colors.white),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 1, bottom: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const SizedBox(
+                                width: 0,
+                              ),
+                              const Icon(Icons.report_gmailerrorred_rounded,
+                                  size: 30, color: Colors.white),
+                              const Text(
+                                'About Us               ',
+                                style: TextStyle(
+                                    color: Colors.black87,
+                                    // color: Color(0xff388A75),
+                                    fontFamily: 'Rockwell',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pushNamed(
+                                      context, '/student-profile');
+                                },
+                                child: const Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 30,
+                                    color: Colors.white),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

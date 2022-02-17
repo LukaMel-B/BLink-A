@@ -143,7 +143,7 @@ class _parloginState extends State<parlogin> {
                           padding: const EdgeInsets.only(bottom: 13, right: 15),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/student-profile');
+                              Navigator.pushNamed(context, '/Settings');
                             },
                             child: const Icon(Icons.arrow_forward_rounded,
                                 size: 30, color: Colors.white),

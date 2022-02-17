@@ -40,7 +40,7 @@ class _SignUpState extends State<SignUp> {
                             'Sign Up',
                             style: TextStyle(
                                 color: Color(0xffABAAAA),
-                                // color: Color(0xff388A75),
+                                // color: Color(0xff388A75),y
                                 fontFamily: 'Roboto',
                                 fontSize: 18),
                           ),

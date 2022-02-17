@@ -42,8 +42,9 @@ class _StudentProfileState extends State<StudentProfile> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const CircleAvatar(
+                     const CircleAvatar(
                       radius: 40,
+                      backgroundColor: Color(0xffFDF9F9),
                     ),
                     const SizedBox(
                       height: 40,
@@ -54,10 +55,10 @@ class _StudentProfileState extends State<StudentProfile> {
                         decoration: BoxDecoration(
                             color: const Color(0xffFDF9F9).withOpacity(0.39),
                             borderRadius: BorderRadius.circular(30.0)),
-                        height: 365,
+                        height: 345,
                         width: 100,
                         child: Padding(
-                          padding: const EdgeInsets.all(50),
+                          padding: const EdgeInsets.all(40),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
@@ -110,7 +111,7 @@ class _StudentProfileState extends State<StudentProfile> {
                                 height: 30,
                               ),
                               Text(
-                                ' 3rd year',
+                                '3rd year',
                                 style: TextStyle(
                                     color: Color(0xff5a5959),
                                     // color: Color(0xff388A75),
@@ -122,7 +123,7 @@ class _StudentProfileState extends State<StudentProfile> {
                                 height: 30,
                               ),
                               Text(
-                                ' AdNo: 4589',
+                                'AdNo: 4589',
                                 style: TextStyle(
                                     color: Color(0xff5a5959),
                                     // color: Color(0xff388A75),
@@ -135,14 +136,17 @@ class _StudentProfileState extends State<StudentProfile> {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: 15,
+                    ),
                     Padding(
-                      padding: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.only(top: 10,left: 10,right: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 25, left: 25),
+                            padding: const EdgeInsets.only(bottom: 10, left: 25),
                             child: TextButton(
                               onPressed: () {
                                 Navigator.pushNamed(context, '/signup');
@@ -162,7 +166,7 @@ class _StudentProfileState extends State<StudentProfile> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 25, right: 15),
+                            padding: const EdgeInsets.only(bottom: 10, right: 15),
                             child: TextButton(
                               onPressed: () {
                                 Navigator.pushNamed(context, '/StudentProfile');

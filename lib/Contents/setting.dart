@@ -23,7 +23,7 @@ class _SettingsState extends State<Settings> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
-                child: ListView(
+                child: Column(
                   children: <Widget>[
                     const SizedBox(height: 30),
                     Row(

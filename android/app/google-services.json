@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "283283148658",
+    "project_id": "blink-f0f52",
+    "storage_bucket": "blink-f0f52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283283148658:android:1419433a8ae1f4c93397eb",
+        "android_client_info": {
+          "package_name": "com.app.blink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283283148658-9taqbndbdcrgd1s9r5b40veidr2heu61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQiaw9uvaPCU4lT9ELGXNVgQOGnt1HyrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283283148658-9taqbndbdcrgd1s9r5b40veidr2heu61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

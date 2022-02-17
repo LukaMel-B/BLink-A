@@ -8,6 +8,7 @@ import 'Contents//teacher-login.dart';
 import 'Contents//parent-login.dart';
 import 'Contents//SignUp.dart';
 import 'Contents//student-profile-edit.dart';
+import 'Contents//student-profile-view.dart';
 import 'Contents//Setting.dart';
 
 void main() {

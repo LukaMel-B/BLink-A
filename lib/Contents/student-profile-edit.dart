@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class StudentProfile extends StatefulWidget {
-  const StudentProfile({Key? key}) : super(key: key);
+class StudentProfileEdit extends StatefulWidget {
+  const StudentProfileEdit({Key? key}) : super(key: key);
 
   @override
-  _StudentProfileState createState() => _StudentProfileState();
+  _StudentProfileEditState createState() => _StudentProfileEditState();
 }
 
-class _StudentProfileState extends State<StudentProfile> {
+class _StudentProfileEditState extends State<StudentProfileEdit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

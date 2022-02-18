@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-
-class StudentProfileEdit extends StatefulWidget {
-  const StudentProfileEdit({Key? key}) : super(key: key);
+class TeacherProfileEdit extends StatefulWidget {
+  const TeacherProfileEdit({Key? key}) : super(key: key);
 
   @override
-  _StudentProfileEditState createState() => _StudentProfileEditState();
+  _TeacherProfileEditState createState() => _TeacherProfileEditState();
 }
 
-class _StudentProfileEditState extends State<StudentProfileEdit> {
+class _TeacherProfileEditState extends State<TeacherProfileEdit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +42,9 @@ class _StudentProfileEditState extends State<StudentProfileEdit> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const CircleAvatar(
+                     CircleAvatar(
                       radius: 40,
+                      backgroundColor: const Color(0xffFDF9F9).withOpacity(0.99),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
@@ -63,35 +63,10 @@ class _StudentProfileEditState extends State<StudentProfileEdit> {
                           ),
                           filled: true,
                           hintStyle:
-                              const TextStyle(color: Color(0xffABAAAA)),
+                          const TextStyle(color: Color(0xffABAAAA)),
                           hintText: "Full Name",
                           fillColor:
-                              const Color(0xffFDF9F9).withOpacity(0.39),
-                        ),
-                        keyboardType: TextInputType.name,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          top: 5, bottom: 5, left: 50, right: 50),
-                      child: TextField(
-                        cursorColor: const Color(0xff46665E),
-                        decoration: InputDecoration(
-                          contentPadding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 20),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: const BorderSide(
-                              width: 0,
-                              style: BorderStyle.none,
-                            ),
-                          ),
-                          filled: true,
-                          hintStyle:
-                              const TextStyle(color: Color(0xffABAAAA)),
-                          hintText: "Guardian Name",
-                          fillColor:
-                              const Color(0xffFDF9F9).withOpacity(0.39),
+                          const Color(0xffFDF9F9).withOpacity(0.39),
                         ),
                         keyboardType: TextInputType.name,
                       ),
@@ -141,10 +116,10 @@ class _StudentProfileEditState extends State<StudentProfileEdit> {
                                 ),
                                 filled: true,
                                 hintStyle:
-                                    const TextStyle(color: Color(0xffABAAAA)),
+                                const TextStyle(color: Color(0xffABAAAA)),
                                 hintText: "Department",
                                 fillColor:
-                                    const Color(0xffFDF9F9).withOpacity(0.39),
+                                const Color(0xffFDF9F9).withOpacity(0.39),
                               ),
                               keyboardType: TextInputType.name,
                             ),
@@ -167,12 +142,12 @@ class _StudentProfileEditState extends State<StudentProfileEdit> {
                                   ),
                                   filled: true,
                                   hintStyle:
-                                      const TextStyle(color: Color(0xffABAAAA)),
-                                  hintText: "Year",
+                                  const TextStyle(color: Color(0xffABAAAA)),
+                                  hintText: "Subject",
                                   fillColor:
-                                      const Color(0xffFDF9F9).withOpacity(0.39),
+                                  const Color(0xffFDF9F9).withOpacity(0.39),
                                 ),
-                                keyboardType: TextInputType.datetime,
+                                keyboardType: TextInputType.text,
                               ),
                             ),
                           ),
@@ -181,7 +156,7 @@ class _StudentProfileEditState extends State<StudentProfileEdit> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
-                         bottom: 5, left: 50, right: 50),
+                           bottom: 10, left: 50, right: 50),
                       child: TextField(
                         cursorColor: const Color(0xff46665E),
                         decoration: InputDecoration(
@@ -196,10 +171,37 @@ class _StudentProfileEditState extends State<StudentProfileEdit> {
                           ),
                           filled: true,
                           hintStyle:
-                              const TextStyle(color: Color(0xffABAAAA)),
-                          hintText: "Admission number",
+                          const TextStyle(color: Color(0xffABAAAA)),
+                          hintText: "Mobile Number",
                           fillColor:
-                              const Color(0xffFDF9F9).withOpacity(0.35),
+                          const Color(0xffFDF9F9).withOpacity(0.39),
+                        ),
+                        keyboardType: TextInputType.phone,
+                      ),
+                    ),
+
+
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 5, left: 50, right: 50),
+                      child: TextField(
+                        cursorColor: const Color(0xff46665E),
+                        decoration: InputDecoration(
+                          contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 30, vertical: 20),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                            borderSide: const BorderSide(
+                              width: 0,
+                              style: BorderStyle.none,
+                            ),
+                          ),
+                          filled: true,
+                          hintStyle:
+                          const TextStyle(color: Color(0xffABAAAA)),
+                          hintText: "Alternative Mobile number",
+                          fillColor:
+                          const Color(0xffFDF9F9).withOpacity(0.35),
                         ),
                         keyboardType: TextInputType.phone,
                       ),
@@ -214,14 +216,14 @@ class _StudentProfileEditState extends State<StudentProfileEdit> {
                           child: TextButton(
                             onPressed: () {
                               Navigator.pushNamed(
-                                  context, '/StudentProfile');
+                                  context, '/TeacherProfile');
                             },
                             child: const Icon(Icons.arrow_forward_rounded,
                                 size: 30, color: Colors.white),
                             style: TextButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius:
-                                      BorderRadius.circular(15)),
+                                  BorderRadius.circular(15)),
                             ),
                           ),
                         ),

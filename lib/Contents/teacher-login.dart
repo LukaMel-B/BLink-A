@@ -143,7 +143,7 @@ class _teachloginState extends State<teachlogin> {
                           padding: const EdgeInsets.only(bottom: 14, right: 15),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/teacher-profile');
+                              Navigator.pushNamed(context, '/TeacherProfile');
                             },
                             child: const Icon(Icons.arrow_forward_rounded,
                                 size: 30, color: Colors.white),

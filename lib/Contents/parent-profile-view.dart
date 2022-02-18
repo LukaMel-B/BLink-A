@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-
-class StudentProfile extends StatefulWidget {
-  const StudentProfile({Key? key}) : super(key: key);
+class ParentProfile extends StatefulWidget {
+  const ParentProfile({Key? key}) : super(key: key);
 
   @override
-  _StudentProfileState createState() => _StudentProfileState();
+  _ParentProfileState createState() => _ParentProfileState();
 }
 
-class _StudentProfileState extends State<StudentProfile> {
+class _ParentProfileState extends State<ParentProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +41,7 @@ class _StudentProfileState extends State<StudentProfile> {
                     const SizedBox(
                       height: 20,
                     ),
-                     const CircleAvatar(
+                    const CircleAvatar(
                       radius: 40,
                       backgroundColor: Color(0xffFDF9F9),
                     ),
@@ -75,7 +74,7 @@ class _StudentProfileState extends State<StudentProfile> {
                                 height: 30,
                               ),
                               Text(
-                                'Guardian Name',
+                                'Occupation',
                                 style: TextStyle(
                                     color: Color(0xff5a5959),
                                     // color: Color(0xff388A75),
@@ -87,7 +86,7 @@ class _StudentProfileState extends State<StudentProfile> {
                                 height: 30,
                               ),
                               Text(
-                                'example@email.com',
+                                'Father Name',
                                 style: TextStyle(
                                     color: Color(0xff5a5959),
                                     // color: Color(0xff388A75),
@@ -99,7 +98,7 @@ class _StudentProfileState extends State<StudentProfile> {
                                 height: 30,
                               ),
                               Text(
-                                'Computer Science',
+                                'Mother Name',
                                 style: TextStyle(
                                     color: Color(0xff5a5959),
                                     // color: Color(0xff388A75),
@@ -111,7 +110,7 @@ class _StudentProfileState extends State<StudentProfile> {
                                 height: 30,
                               ),
                               Text(
-                                '3rd year',
+                                'Mobile No',
                                 style: TextStyle(
                                     color: Color(0xff5a5959),
                                     // color: Color(0xff388A75),
@@ -123,7 +122,7 @@ class _StudentProfileState extends State<StudentProfile> {
                                 height: 30,
                               ),
                               Text(
-                                'AdNo: 4589',
+                                'Alternative Mobile No',
                                 style: TextStyle(
                                     color: Color(0xff5a5959),
                                     // color: Color(0xff388A75),
@@ -136,7 +135,7 @@ class _StudentProfileState extends State<StudentProfile> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     Padding(
@@ -149,7 +148,7 @@ class _StudentProfileState extends State<StudentProfile> {
                             padding: const EdgeInsets.only(bottom: 10, left: 25),
                             child: TextButton(
                               onPressed: () {
-                                Navigator.pushNamed(context, '/StudentProfileEdit');
+                                Navigator.pushNamed(context, '/ParentProfileEdit');
                               },
                               child: const Text(
                                 ' Edit Profile',

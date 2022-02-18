@@ -7,10 +7,13 @@ import 'Contents//parent.dart';
 import 'Contents//teacher-login.dart';
 import 'Contents//parent-login.dart';
 import 'Contents//SignUp.dart';
+import 'Contents//teacher-profile-edit.dart';
 import 'Contents//student-profile-edit.dart';
+import 'Contents//teachers-profile-view.dart';
 import 'Contents//student-profile-view.dart';
+import 'Contents//parent-profile-edit.dart';
+import 'Contents//parent-profile-view.dart';
 import 'Contents//Setting.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -32,6 +35,11 @@ class MyApp extends StatelessWidget {
           '/par-login': (context) => const parlogin(),
           '/signup': (context) => const SignUp(),
           '/StudentProfile': (context) => const StudentProfile(),
+          '/StudentProfileEdit': (context) => const StudentProfileEdit(),
+          '/TeacherProfile': (context) => const TeacherProfile(),
+          '/TeacherProfileEdit': (context) => const TeacherProfileEdit(),
+          '/ParentProfile': (context) => const ParentProfile(),
+          '/ParentProfileEdit': (context) => const ParentProfileEdit(),
           '/Settings': (context) => const Settings(),
         });
   }

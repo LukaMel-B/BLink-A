@@ -15,10 +15,12 @@ import 'Contents//parent-profile-edit.dart';
 import 'Contents//parent-profile-view.dart';
 import 'Contents//Setting.dart';
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

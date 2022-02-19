@@ -1,13 +1,15 @@
+import 'package:blink/Contents/SignUp.dart';
+import 'package:blink/Contents/student-profile-view.dart';
 import 'package:flutter/material.dart';
 
-class studlogin extends StatefulWidget {
-  const studlogin({Key? key}) : super(key: key);
+class StudentLogin extends StatefulWidget {
+  const StudentLogin({Key? key}) : super(key: key);
 
   @override
-  _studloginState createState() => _studloginState();
+  _StudentLoginState createState() => _StudentLoginState();
 }
 
-class _studloginState extends State<studlogin> {
+class _StudentLoginState extends State<StudentLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,7 +125,11 @@ class _studloginState extends State<studlogin> {
                           padding: const EdgeInsets.only(bottom: 25, left: 25),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/signup');
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => const SignUp())
+                                  ));
                             },
                             child: const Text(
                               ' Sign Up',
@@ -143,7 +149,11 @@ class _studloginState extends State<studlogin> {
                           padding: const EdgeInsets.only(bottom: 25, right: 15),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/StudentProfile');
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => const StudentProfile())
+                                  ));
                             },
                             child: const Icon(Icons.arrow_forward_rounded,
                                 size: 30, color: Colors.white),

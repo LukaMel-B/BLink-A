@@ -1,13 +1,13 @@
+import 'package:blink/Contents/parent-login.dart';
 import 'package:flutter/material.dart';
-
-class parent1 extends StatefulWidget {
-  const parent1({Key? key}) : super(key: key);
+class Parent1 extends StatefulWidget {
+  const Parent1({Key? key}) : super(key: key);
 
   @override
-  _parent1State createState() => _parent1State();
+  _Parent1State createState() => _Parent1State();
 }
 
-class _parent1State extends State<parent1> {
+class _Parent1State extends State<Parent1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +76,7 @@ class _parent1State extends State<parent1> {
                   height: 30,
                 ),
                 Image.asset(
-                  'images/parent1-page.png',
+                  'images/Parent1-page.png',
                   height: 310,
                   width: 310,
                   fit: BoxFit.fill,
@@ -91,7 +91,12 @@ class _parent1State extends State<parent1> {
                     padding: const EdgeInsets.only(bottom: 15),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/par-login');
+                       // Navigator.pushNamed(context, '/par-login');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => const ParentLogin())
+                            ));
                       },
                       child: const Padding(
                         padding: EdgeInsets.only(

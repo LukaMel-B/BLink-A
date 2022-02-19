@@ -1,3 +1,4 @@
+import 'package:blink/Contents/student-profile-edit.dart';
 import 'package:flutter/material.dart';
 
 class StudentProfile extends StatefulWidget {
@@ -149,7 +150,11 @@ class _StudentProfileState extends State<StudentProfile> {
                             padding: const EdgeInsets.only(bottom: 10, left: 25),
                             child: TextButton(
                               onPressed: () {
-                                Navigator.pushNamed(context, '/StudentProfileEdit');
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: ((context) => const StudentProfileEdit())
+                                    ));
                               },
                               child: const Text(
                                 ' Edit Profile',
@@ -169,7 +174,7 @@ class _StudentProfileState extends State<StudentProfile> {
                             padding: const EdgeInsets.only(bottom: 10, right: 15),
                             child: TextButton(
                               onPressed: () {
-                                Navigator.pushNamed(context, '/StudentProfile');
+                                //Navigator.pushNamed(context, '/StudentProfile');
                               },
                               child: const Icon(Icons.arrow_forward_rounded,
                                   size: 30, color: Colors.white),

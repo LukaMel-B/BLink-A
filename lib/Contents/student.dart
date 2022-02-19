@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
+import 'package:blink/Contents/student-login.dart';
 import 'package:flutter/material.dart';
 
-class student1 extends StatefulWidget {
-  const student1({Key? key}) : super(key: key);
+class Student1 extends StatefulWidget {
+  const Student1({Key? key}) : super(key: key);
 
   @override
-  _student1State createState() => _student1State();
+  _Student1State createState() => _Student1State();
 }
 
-class _student1State extends State<student1> {
+class _Student1State extends State<Student1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,7 +92,12 @@ class _student1State extends State<student1> {
                     padding: const EdgeInsets.only(bottom: 15),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/stud-login');
+                        //Navigator.pushNamed(context, '/StudentLogin');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => const StudentLogin())
+                            ));
                       },
                       child: const Padding(
                         padding: EdgeInsets.only(

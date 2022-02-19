@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class parlogin extends StatefulWidget {
-  const parlogin({Key? key}) : super(key: key);
+class ParentLogin extends StatefulWidget {
+  const ParentLogin({Key? key}) : super(key: key);
 
   @override
-  _parloginState createState() => _parloginState();
+  _ParentLoginState createState() => _ParentLoginState();
 }
 
-class _parloginState extends State<parlogin> {
+class _ParentLoginState extends State<ParentLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

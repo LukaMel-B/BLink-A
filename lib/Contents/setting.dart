@@ -263,8 +263,7 @@ class _SettingsState extends State<Settings> {
                               ),
                               TextButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(
-                                      context, '/student-profile');
+                                  //Navigator.pushNamed(context, '/student-profile');
                                 },
                                 child: const Icon(
                                     Icons.arrow_forward_ios_rounded,

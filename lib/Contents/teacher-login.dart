@@ -1,13 +1,15 @@
+import 'package:blink/Contents/SignUp.dart';
+import 'package:blink/Contents/teachers-profile-view.dart';
 import 'package:flutter/material.dart';
 
-class teachlogin extends StatefulWidget {
-  const teachlogin({Key? key}) : super(key: key);
+class TeacherLogin extends StatefulWidget {
+  const TeacherLogin({Key? key}) : super(key: key);
 
   @override
-  _teachloginState createState() => _teachloginState();
+  _TeacherLoginState createState() => _TeacherLoginState();
 }
 
-class _teachloginState extends State<teachlogin> {
+class _TeacherLoginState extends State<TeacherLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,7 +125,12 @@ class _teachloginState extends State<teachlogin> {
                           padding: const EdgeInsets.only(bottom: 14, left: 25),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/signup');
+                             // Navigator.pushNamed(context, '/signup');
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => const SignUp())
+                                  ));
                             },
                             child: const Text(
                               ' Sign Up',
@@ -143,7 +150,12 @@ class _teachloginState extends State<teachlogin> {
                           padding: const EdgeInsets.only(bottom: 14, right: 15),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/TeacherProfile');
+                              //Navigator.pushNamed(context, '/TeacherProfile');
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => const TeacherProfile())
+                                  ));
                             },
                             child: const Icon(Icons.arrow_forward_rounded,
                                 size: 30, color: Colors.white),

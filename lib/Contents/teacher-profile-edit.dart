@@ -1,3 +1,4 @@
+import 'package:blink/Contents/teachers-profile-view.dart';
 import 'package:flutter/material.dart';
 class TeacherProfileEdit extends StatefulWidget {
   const TeacherProfileEdit({Key? key}) : super(key: key);
@@ -215,8 +216,12 @@ class _TeacherProfileEditState extends State<TeacherProfileEdit> {
                               top: 18, bottom: 25, right: 15),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(
-                                  context, '/TeacherProfile');
+                              //Navigator.pushNamed(context, '/TeacherProfile');
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => const TeacherProfile())
+                                  ));
                             },
                             child: const Icon(Icons.arrow_forward_rounded,
                                 size: 30, color: Colors.white),

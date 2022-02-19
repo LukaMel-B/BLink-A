@@ -1,3 +1,4 @@
+import 'package:blink/Contents/parent-profile-view.dart';
 import 'package:flutter/material.dart';
 
 class ParentProfileEdit extends StatefulWidget {
@@ -216,8 +217,11 @@ class _ParentProfileEditState extends State<ParentProfileEdit> {
                               top: 18, bottom: 25, right: 15),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(
-                                  context, '/ParentProfile');
+                              Navigator.push(
+                                  context,
+                              MaterialPageRoute(
+                                  builder: ((context) => const ParentProfile())
+                              ));
                             },
                             child: const Icon(Icons.arrow_forward_rounded,
                                 size: 30, color: Colors.white),

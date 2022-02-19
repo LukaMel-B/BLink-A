@@ -1,6 +1,11 @@
+import 'package:blink/Contents/parent.dart';
+import 'package:blink/Contents/student.dart';
+import 'package:blink/Contents/teacher.dart';
 import 'package:flutter/material.dart';
 
-class landing extends StatelessWidget {
+class Landing extends StatelessWidget {
+  const Landing({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +37,7 @@ class landing extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'images/landing-page.png',
+                  'images/Landing-page.png',
                   height: 320.0,
                   fit: BoxFit.fill,
                 ),
@@ -46,7 +51,12 @@ class landing extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 5),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/student');
+                        //Navigator.pushNamed(context, '/student');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => const Student1())
+                            ));
                       },
                       child: const Padding(
                         padding: EdgeInsets.only(
@@ -71,7 +81,12 @@ class landing extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 5),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/teacher');
+                        //Navigator.pushNamed(context, '/teacher');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => const Teacher1())
+                            ));
                       },
                       child: const Padding(
                         padding: EdgeInsets.only(
@@ -96,7 +111,12 @@ class landing extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 5),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/parent');
+                        //Navigator.pushNamed(context, '/parent');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => const Parent1())
+                            ));
                       },
                       child: const Padding(
                         padding: EdgeInsets.only(

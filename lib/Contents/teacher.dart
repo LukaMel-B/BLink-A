@@ -1,14 +1,15 @@
 
+import 'package:blink/Contents/teacher-login.dart';
 import 'package:flutter/material.dart';
 
-class teacher1 extends StatefulWidget {
-  const teacher1({Key? key}) : super(key: key);
+class Teacher1 extends StatefulWidget {
+  const Teacher1({Key? key}) : super(key: key);
 
   @override
-  _teacher1State createState() => _teacher1State();
+  _Teacher1State createState() => _Teacher1State();
 }
 
-class _teacher1State extends State<teacher1> {
+class _Teacher1State extends State<Teacher1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,7 +93,12 @@ class _teacher1State extends State<teacher1> {
                     padding: const EdgeInsets.only(bottom: 15),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/teach-login');
+                       // Navigator.pushNamed(context, '/teach-login');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => const TeacherLogin())
+                            ));
                       },
                       child: const Padding(
                         padding: EdgeInsets.only(

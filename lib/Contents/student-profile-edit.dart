@@ -45,7 +45,8 @@ class _StudentProfileEditState extends State<StudentProfileEdit> {
                       height: 20,
                     ),
                     const CircleAvatar(
-                      radius: 40,
+                      radius: 50,
+                    //backgroundImage: AssetImage('images/student-profile.png'),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(

@@ -1,4 +1,4 @@
-import 'package:blink/Contents/student-profile-view.dart';
+import 'package:blink/Contents/student-profile-edit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -40,6 +40,8 @@ class _SignUpState extends State<SignUp> {
             'phone': phone,
             'UserType': user,
           });
+        Navigator.push(context,MaterialPageRoute(builder: ((context) => const StudentProfileEdit())));
+
     } catch (err) {
       var message = 'Email already have an account!';
 

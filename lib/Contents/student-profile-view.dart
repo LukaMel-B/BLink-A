@@ -1,5 +1,10 @@
+import 'package:blink/Contents/Dashboard/Student/Student-dashboard.dart';
 import 'package:blink/Contents/student-profile-edit.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'functions/const.dart';
+import 'package:blink/Contents/functions/profileView.dart';
 
 class StudentProfile extends StatefulWidget {
   const StudentProfile({Key? key}) : super(key: key);
@@ -9,17 +14,75 @@ class StudentProfile extends StatefulWidget {
 }
 
 class _StudentProfileState extends State<StudentProfile> {
+  String nameHolder = "name";
+  String imageUrl = 'images/student-profile.png';
+  String parentHolder = "parent name";
+  String deptHolder = "department";
+  String emailHolder = "email";
+  String yearHolder = "year";
+  String adHolder = "adno";
+  final _auth = FirebaseAuth.instance;
+  final _fireStore = FirebaseFirestore.instance;
+  String loggedUser = "no uid";
+
+  void getUserID() {
+    try {
+      final users = _auth.currentUser;
+      if (users != null) {
+        loggedUser = users.uid;
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  dynamic getDetails(String user) async {
+    if (loggedUser.length > 25) {
+      final detail = await _fireStore.collection("users").doc(user).get();
+      setState(() {
+        nameHolder = detail.data()?['fullName'] ?? "name";
+        parentHolder = detail.data()?['GuardianMail'] ?? "Parent Mail";
+        deptHolder = detail.data()?['Department'] ?? "department";
+        emailHolder = detail.data()?['email'] ?? "email";
+        yearHolder = detail.data()?['Year'] ?? "year";
+        adHolder = detail.data()?['AdmissionNumber'] ?? "admission number";
+        imageUrl =
+            detail.data()?['UserPicture'] ?? 'images/student-profile.png';
+        print(
+            "-----------------------------------------------------------------$imageUrl");
+      });
+    } else {
+      var message = 'Not loggedIn';
+      final snackBar = SnackBar(
+        content: Text(
+          message,
+          style: const TextStyle(
+              color: Color(0xffABAAAA),
+              // color: Color(0xff388A75),y
+              fontFamily: 'Roboto',
+              fontWeight: FontWeight.w500,
+              fontSize: 15),
+        ),
+        backgroundColor: const Color(0xffF9FFED),
+      );
+
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getUserID();
+    getDetails(loggedUser);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Color(0xffF9FFED), Color(0xffA4DADA)]),
-          ),
+          decoration: kTextFieldDecoration,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -43,12 +106,16 @@ class _StudentProfileState extends State<StudentProfile> {
                     const SizedBox(
                       height: 20,
                     ),
-                     const CircleAvatar(
-                      radius: 40,
-                      backgroundColor: Color(0xffFDF9F9),
+                    SizedBox(
+                      height: 120,
+                      width: 120,
+                      child: ClipOval(
+                        child: Image.network(imageUrl),
+                        // foregroundImage: NetworkImage(imageUrl),
+                      ),
                     ),
                     const SizedBox(
-                      height: 40,
+                      height: 25,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 50, right: 50),
@@ -59,102 +126,63 @@ class _StudentProfileState extends State<StudentProfile> {
                         height: 345,
                         width: 100,
                         child: Padding(
-                          padding: const EdgeInsets.all(40),
+                          padding: const EdgeInsets.fromLTRB(40, 40, 40, 10),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                'Full Name',
-                                style: TextStyle(
-                                    color: Color(0xff5a5959),
-                                    // color: Color(0xff388A75),
-                                    fontFamily: 'Rockwell',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.normal),
+                            children: [
+                              ProfileView(
+                                text: nameHolder,
                               ),
-                              SizedBox(
-                                height: 30,
+                              ProfileView(
+                                text: parentHolder,
                               ),
-                              Text(
-                                'Guardian Name',
-                                style: TextStyle(
-                                    color: Color(0xff5a5959),
-                                    // color: Color(0xff388A75),
-                                    fontFamily: 'Rockwell',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.normal),
+                              ProfileView(
+                                text: emailHolder,
                               ),
-                              SizedBox(
-                                height: 30,
+                              ProfileView(
+                                text: deptHolder,
                               ),
-                              Text(
-                                'example@email.com',
-                                style: TextStyle(
-                                    color: Color(0xff5a5959),
-                                    // color: Color(0xff388A75),
-                                    fontFamily: 'Rockwell',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.normal),
+                              Row(
+                                children: [
+                                  const ProfileView(
+                                    text: 'Year: ',
+                                  ),
+                                  ProfileView(
+                                    text: yearHolder,
+                                  ),
+                                ],
                               ),
-                              SizedBox(
-                                height: 30,
-                              ),
-                              Text(
-                                'Computer Science',
-                                style: TextStyle(
-                                    color: Color(0xff5a5959),
-                                    // color: Color(0xff388A75),
-                                    fontFamily: 'Rockwell',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.normal),
-                              ),
-                              SizedBox(
-                                height: 30,
-                              ),
-                              Text(
-                                '3rd year',
-                                style: TextStyle(
-                                    color: Color(0xff5a5959),
-                                    // color: Color(0xff388A75),
-                                    fontFamily: 'Rockwell',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.normal),
-                              ),
-                              SizedBox(
-                                height: 30,
-                              ),
-                              Text(
-                                'AdNo: 4589',
-                                style: TextStyle(
-                                    color: Color(0xff5a5959),
-                                    // color: Color(0xff388A75),
-                                    fontFamily: 'Rockwell',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.normal),
+                              Row(
+                                children: [
+                                  const ProfileView(
+                                    text: 'Admission no: ',
+                                  ),
+                                  ProfileView(
+                                    text: adHolder,
+                                  ),
+                                ],
                               ),
                             ],
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 10,left: 10,right: 10),
+                      padding:
+                          const EdgeInsets.only(top: 5, left: 10, right: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 10, left: 25),
+                            padding:
+                                const EdgeInsets.only(bottom: 10, left: 25),
                             child: TextButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: ((context) => const StudentProfileEdit())
-                                    ));
+                                Navigator.pop(context);
                               },
                               child: const Text(
                                 ' Edit Profile',
@@ -167,14 +195,20 @@ class _StudentProfileState extends State<StudentProfile> {
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15)),
                                   textStyle: const TextStyle(
-                                      fontSize: 19, fontWeight: FontWeight.w800)),
+                                      fontSize: 19,
+                                      fontWeight: FontWeight.w800)),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 10, right: 15),
+                            padding:
+                                const EdgeInsets.only(bottom: 10, right: 15),
                             child: TextButton(
                               onPressed: () {
-                                //Navigator.pushNamed(context, '/StudentProfile');
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: ((context) =>
+                                            const StudentDashboard())));
                               },
                               child: const Icon(Icons.arrow_forward_rounded,
                                   size: 30, color: Colors.white),
